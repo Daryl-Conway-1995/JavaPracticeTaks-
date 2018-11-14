@@ -8,6 +8,18 @@ public class FactorialTest {
     private Factorial factorial = new Factorial();
 
     @Test
-    public void shouldBeTrue() {assertTrue(factorial.isThisFactorial(720));}
+    public void factorialOfSix() {assertTrue(factorial.isThisFactorial(720));}
+
+    @Test
+    public void factorialOfTen() {assertTrue(factorial.isThisFactorial(3628800));}
+
+    @Test
+    public void factorialOfTwo() {assertTrue(factorial.isThisFactorial(2));}
+
+    @Test
+    public void notAFactorialEight() {assertFalse(factorial.isThisFactorial(8));}
+
+    @Test
+    public void negativeInput() {assertFalse(factorial.isThisFactorial(-8));}
 
 }
