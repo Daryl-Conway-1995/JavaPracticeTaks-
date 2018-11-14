@@ -10,7 +10,6 @@ public class Factorial {
             step++;
         }
 
-        if (compared == number) return true;
-        else return false;
+        return  (compared == number);
     }
 }
