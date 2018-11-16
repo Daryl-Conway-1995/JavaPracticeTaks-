@@ -9,13 +9,13 @@ public class PrimeCheckerTest {
 
     @Test
     public void isThisPrime() {
-        assertEquals(primeChecker.isThisPrime(7),true);
-        assertEquals(primeChecker.isThisPrime(53),true);
-        assertEquals(primeChecker.isThisPrime(97),true);
-        assertEquals(primeChecker.isThisPrime(8),false);
-        assertEquals(primeChecker.isThisPrime(2),true);
-        assertEquals(primeChecker.isThisPrime(1),false);
-        assertEquals(primeChecker.isThisPrime(-7),false);
+        assertTrue(primeChecker.isThisPrime(7));
+        assertTrue(primeChecker.isThisPrime(53));
+        assertTrue(primeChecker.isThisPrime(97));
+        assertFalse(primeChecker.isThisPrime(8));
+        assertTrue(primeChecker.isThisPrime(2));
+        assertFalse(primeChecker.isThisPrime(1));
+        assertFalse(primeChecker.isThisPrime(-7));
 
 
     }

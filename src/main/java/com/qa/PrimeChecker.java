@@ -1,7 +1,5 @@
 package com.qa;
 
-import java.util.ArrayList;
-import java.util.List;
 
 public class PrimeChecker {
     public boolean isThisPrime(int inputNumber) {
