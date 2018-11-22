@@ -5,6 +5,7 @@ abstract public class ReadingMaterialBase {
     private String publisher = "";
     private String name= "";
     private String publishedDate = "";
+    private Boolean isInLibrary = true;
 
 
     public void setName(String name) {
@@ -37,6 +38,22 @@ abstract public class ReadingMaterialBase {
 
     public String getPublisher() {
         return publisher;
+    }
+
+    public Boolean isThisInLibrary(){
+        return isInLibrary;
+    }
+
+    public boolean rentBook(){
+        if (isInLibrary) {
+            isInLibrary = false;
+            return true;
+        }
+        return false;
+    }
+
+    public void returnBook(){
+        isInLibrary = true;
     }
 
     @Override

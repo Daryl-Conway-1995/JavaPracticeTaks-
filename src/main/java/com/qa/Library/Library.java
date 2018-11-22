@@ -18,9 +18,31 @@ public class Library {
     public String findBook(String bookName){
         for(ReadingMaterialBase read : storage){
             if (read.getName() == bookName){
+                read.rentBook();
                 return read.toString();
             }
         }
         return "book not found.";
     }
+
+    public String returnBook(String bookName){
+        for(ReadingMaterialBase read : storage){
+            if (read.getName() == bookName){
+                read.returnBook();
+                return read.toString();
+            }
+        }
+        return "book not found.";
+    }
+
+    public String showAllBooks(){
+        String allBooks = "";
+        for(ReadingMaterialBase read : storage){
+            if (read.isThisInLibrary()) {
+                allBooks = allBooks + "\n" + read.toString();
+            }
+        }
+        return allBooks;
+    }
+
 }
